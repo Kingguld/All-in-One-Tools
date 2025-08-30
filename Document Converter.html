@@ -148,7 +148,7 @@
             margin-top: 20px;
         }
         
-        .convert-btn, .download-btn, .back-btn {
+        .convert-btn, .download-btn {
             padding: 12px 30px;
             border: none;
             border-radius: 50px;
@@ -174,15 +174,6 @@
         
         .download-btn:hover {
             background: #009e3d;
-        }
-        
-        .back-btn {
-            background: #6c757d;
-            color: white;
-        }
-        
-        .back-btn:hover {
-            background: #5a6268;
         }
         
         .status-area {
@@ -251,7 +242,7 @@
                 align-items: center;
             }
             
-            .convert-btn, .download-btn, .back-btn {
+            .convert-btn, .download-btn {
                 width: 100%;
                 max-width: 300px;
             }
@@ -322,7 +313,6 @@
             <div class="action-buttons">
                 <button class="convert-btn" id="convertBtn" disabled>Convert</button>
                 <button class="download-btn" id="downloadBtn" disabled>Download</button>
-                <button class="back-btn" id="backBtn">Back to Tools</button>
             </div>
         </div>
         
@@ -345,7 +335,6 @@
             const formatOptions = document.querySelectorAll('.format-option');
             const convertBtn = document.getElementById('convertBtn');
             const downloadBtn = document.getElementById('downloadBtn');
-            const backBtn = document.getElementById('backBtn');
             const statusArea = document.getElementById('statusArea');
             const progressBar = document.getElementById('progressBar');
             
@@ -436,6 +425,7 @@
                 document.body.removeChild(a);
                 
                 statusArea.textContent = 'Download started!';
+            });
             
             // Helper functions
             function updateConvertButtonState() {
